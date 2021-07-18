@@ -16,7 +16,7 @@ class NewsAPIView(generics.ListAPIView):
     queryset = News.objects.all()
     http_method_names = ['get']
 
-    def list(self):
+    def list(self, request):
 
         serializer = NewsSerializer(self.queryset, many=True)
         return Response(serializer.data)
