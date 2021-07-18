@@ -31,22 +31,24 @@ DB_HOST=0.0.0.0 # Адрес БД
 ```sh
 $ docker-compose up --build
 ```
+_____
 или.для запуска в режиме демона:
 ```sh
 $ docker-compose up --build -d
 ```
-
+____
 
 Создаем админа:
 |на запущеном контейнере|На остановленном:|
 | ------ | ------ |
 |```$ docker exec -t -i itfox-test_testproject_1 python manage.py createsuperuser```|```$ docker-compose run testproject python manage.py createsuperuser```|
+___
 Генерируем и применяем миграции:
 |на запущеном контейнере|На остановленном:|
 | ------ | ------ |
 |```$ docker exec -t -i itfox-test_testproject_1 python manage.py makemigrations```|```$ docker-compose run testproject python manage.py makemigrations```|
 |```$ docker exec -t -i itfox-test_testproject_1 python manage.py migrate```|```$ docker-compose run testproject python manage.py migrate```|
-
+___
 ## Точки входа
 
 Dillinger is currently extended with the following plugins.
