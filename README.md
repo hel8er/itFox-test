@@ -19,10 +19,12 @@ $ cd itfox-test
 Отредактировать параметры подключения к БД в файле .env в корне проекта:
 
 ```
+DB_ENGINE=postgresql # Тип БД
 DB_DATABASE=dbase # Имя БД
 DB_USER=user # Имя пользователя БД
 DB_PASSWORD=passW0rd # Пароль БД
 DB_PORT=5432 # Порт БД
+DB_HOST=0.0.0.0 # Адрес БД
 ```
 Далее собираем и запускаем контейнер:
 
@@ -52,7 +54,7 @@ Instructions on how to use them in your own application are linked below.
 
 | Название | Путь | Демо |
 | ------ | ------ | ------------|
-| Сервер авторизации | /auth | http://auth-news.bidbox.ru/auth/ |
+| Сервер авторизации | /auth | [http://auth-news.bidbox.ru/auth/ |
 | Сервер новостей | /news | http://auth-news.bidbox.ru/news/|
 | Админка | /admin |  http://auth-news.bidbox.ru/admin/ |
 
