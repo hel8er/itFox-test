@@ -18,5 +18,5 @@ class NewsAPIView(generics.ListAPIView):
 
     def list(self, request):
 
-        serializer = NewsSerializer(self.queryset, many=True)
+        serializer = NewsSerializer(self.get_queryset(), many=True)
         return Response(serializer.data)
