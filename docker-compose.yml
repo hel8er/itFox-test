@@ -17,8 +17,8 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=itfox
-      - POSTGRES_PASSWORD=passW0rd
-      - POSTGRES_DB=itfox-test
+      - POSTGRES_USER=$SQL_USER
+      - POSTGRES_PASSWORD=$SQL_PASSWORD
+      - POSTGRES_DB=$SQL_DATABASE
 volumes:
   postgres_data:
