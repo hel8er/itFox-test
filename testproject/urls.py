@@ -9,4 +9,4 @@ urlpatterns = [
     path('auth/', obtain_auth_token),  # Ендпоинт получения токена
     path('news/', include('news.urls')),  # Ендпоинт получения списка новостей
 ]
-urlpatterns += staticfiles_urlpatterns()
+urlpatterns += staticfiles_urlpatterns()  # Раздаём статические файлы админки
