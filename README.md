@@ -49,9 +49,6 @@ $  docker-compose run testproject python manage.py createsuperuser
 
 ## Точки входа
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
-
 | Название | Путь | Демо |
 | ------ | ------ | ------------|
 | Сервер авторизации | /auth | [http://auth-news.bidbox.ru/auth/ |
