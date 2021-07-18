@@ -57,11 +57,11 @@ WSGI_APPLICATION = 'testproject.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": 'django.db.backends.postgresql',
-        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
-        "USER": os.environ.get("SQL_USER", "user"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
-        "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432"),
+        "NAME": os.environ.get("DB_DATABASE", os.path.join(BASE_DIR, "db")),
+        "USER": os.environ.get("DB_USER", "user"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "password"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
