@@ -59,7 +59,7 @@ Instructions on how to use them in your own application are linked below.
 | Сервер авторизации | /auth | http://auth-news.bidbox.ru/auth/ |
 | Сервер новостей | /news | http://auth-news.bidbox.ru/news/|
 | Админка | /admin |  http://auth-news.bidbox.ru/admin/ |
-
+____
 _Тестовые учетные данные для демо:_
 |username|password|
 | ------ | ------ |
