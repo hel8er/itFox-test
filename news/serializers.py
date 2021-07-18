@@ -3,7 +3,7 @@ from .models import News
 
 
 class NewsSerializer(serializers.Serializer):
-    """Serializer for news model"""
+    """Сериализатор модели новости"""
     title = serializers.CharField(max_length=200)
     text = serializers.CharField(max_length=999999)
     pub_date = serializers.DateField()
