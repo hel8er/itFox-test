@@ -51,7 +51,7 @@ $  docker-compose run testproject python manage.py createsuperuser
 
 | Название | Путь | Демо |
 | ------ | ------ | ------------|
-| Сервер авторизации | /auth | [http://auth-news.bidbox.ru/auth/ |
+| Сервер авторизации | /auth | http://auth-news.bidbox.ru/auth/ |
 | Сервер новостей | /news | http://auth-news.bidbox.ru/news/|
 | Админка | /admin |  http://auth-news.bidbox.ru/admin/ |
 
