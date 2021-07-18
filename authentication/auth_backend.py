@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from rest_framework import authentication
+from rest_framework import authentication, exceptions
 from rest_framework.authtoken.models import Token
 
 
@@ -13,9 +13,10 @@ class CustomAuthentication(authentication.BaseAuthentication):
         password = request.data.get('password')
         if not username:
             return None
-
-        user = User.objects.get(username=username)
-
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            raise exceptions.AuthenticationFailed('No such user')
         if user.check_password(password):
 
             token = Token.objects.get_or_create(user=user)
