@@ -31,23 +31,26 @@ DB_HOST=0.0.0.0 # Адрес БД
 ```sh
 $ docker-compose up --build
 ```
-или ...
+или.для запуска в режиме демона:
 ```sh
 $ docker-compose up --build -d
 ```
-... для запуска в режиме демона.
 
 
-Для создания суперпользователя на запущеном контейнере:
-```sh
-$  docker exec -t -i itfox-test_testproject_1 python manage.py createsuperuser
-```
-На остановленном:
-```sh
-$  docker-compose run testproject python manage.py createsuperuser
-```
+Создаем админа:
+|на запущеном контейнере|На остановленном:|
+| ------ | ------ |
+|```$ docker exec -t -i itfox-test_testproject_1 python manage.py createsuperuser```|```$ docker-compose run testproject python manage.py createsuperuser```|
+Генерируем и применяем миграции:
+|на запущеном контейнере|На остановленном:|
+| ------ | ------ |
+|```$ docker exec -t -i itfox-test_testproject_1 python manage.py makemigrations```|```$ docker-compose run testproject python manage.py makemigrations```|
+|```$ docker exec -t -i itfox-test_testproject_1 python manage.py migrate```|```$ docker-compose run testproject python manage.py migrate```|
 
 ## Точки входа
+
+Dillinger is currently extended with the following plugins.
+Instructions on how to use them in your own application are linked below.
 
 | Название | Путь | Демо |
 | ------ | ------ | ------------|
@@ -55,6 +58,7 @@ $  docker-compose run testproject python manage.py createsuperuser
 | Сервер новостей | /news | http://auth-news.bidbox.ru/news/|
 | Админка | /admin |  http://auth-news.bidbox.ru/admin/ |
 
-_Тестовые учетные данные:_
-username: itfox
-password: !TF0X
+_Тестовые учетные данные для демо:_
+|username|password|
+| ------ | ------ |
+|itfox|!TF0X|
