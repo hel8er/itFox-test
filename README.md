@@ -58,6 +58,6 @@ Instructions on how to use them in your own application are linked below.
 | Сервер новостей | /news | http://auth-news.bidbox.ru/news/|
 | Админка | /admin |  http://auth-news.bidbox.ru/admin/ |
 
-_Тестовые учетные данные от админки:_
+_Тестовые учетные данные:_
 username: itfox
 password: !TF0X
